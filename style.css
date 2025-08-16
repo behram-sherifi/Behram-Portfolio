@@ -273,6 +273,7 @@ body {
     transition: background 0.2s ease;
 }
 
+
 .work-button:hover {
     background: linear-gradient(to right, #4f46e5, #7c3aed);
 }
