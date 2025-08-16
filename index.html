@@ -5,16 +5,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Behram's Portfolio</title>
         <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/6bcb240182.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <!-- Header -->
             <header class="header">
                 <div class="header-container">
                     <span class="logo-circle">BS</span>
-                    <a href="#home" id="nav-group" class="active">Home</a>
-                    <a href="#about" id="nav-group">About Me</a>
-                    <a href="#work" id="nav-group">My Work</a>
-                    <a href="#contact" id="button" id="nav-group">Contact Me</a>
+                    <button class="hamburger" id="hamburger">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <nav class="nav-links" id="nav-links">
+                        <a href="#home" class="nav-link active">Home</a>
+                        <a href="#about" class="nav-link">About Me</a>
+                        <a href="#work" class="nav-link">My Work</a>
+                        <a href="#contact" class="nav-link">Contact Me</a>
+                    </nav>
                 </div>
             </header>
         <!-- Hero Section -->
@@ -22,29 +28,91 @@
                 <div class="hero-content">
                     <div class="hero-tex">
                         <h1>Hello, I'm Behram.</h1>
-                        <p>I craft responsive, user-friendly websites as a front-end developer.</p>
+                        <p>I craft responsive, user-friendly websites as a front-end developer. 
+                        My focus is on clean design, accessibility, and performance to ensure that every project 
+                        looks great and functions smoothly across all devices. 
+                        I enjoy turning creative ideas into interactive digital experiences.</p>
                         <a href="#work" class="hero-button">View My Work</a>
                     </div>
                     <div class="hero-image">
-                        <img src="portrait.png" alt="Picture of Me">
+                        <img src="IMG_8412.JPG" alt="Picture of Me">
                     </div>
                 </div>
             </section>
         <!-- About Me -->
         <!-- My Work -->
-        <!-- Footer -->
-            <footer class="footer" id="contact">
-                <div class="footer-content">
-                    <h2>Let's Connect</h2>
-                    <p>You can reach me via email or find me on my socials.</p>
-                    <div class="contact-links">
-                        <a href="mailto:behramsherifi7@gmail.com">behramsherifi7@gmail.com</a>
-                        <a href="https://github.com/behram-sherifi" target="_blank">GitHub</a>
-                        <a href="#number">+389 77562742</a>
+            <section class="work-section" id="work">
+                <div class="work-container">
+                    <h2>My Work</h2>
+                    <p>Here are some of the projects I’ve worked on recently. More coming soon!</p>
+                    <div class="work-grid">
+                        <div class="work-card">
+                        <img src="contact-form.png" alt="Project 1 Screenshot">
+                        <h3>Contact Form</h3>
+                        <p>A responsive contact form built with HTML and CSS, featuring clean design and form validation for a user-friendly experience.</p>
+                        <a href="https://github.com/behram-sherifi" target="_blank" class="work-button">View Project</a>
                     </div>
-                    <p class="copyright">&#169 2025 Behram Sherifi. All rights reserved.</p>
-                    <p id="scroll"><a href="#home">Scroll to Top &#10548</a></p>
+                    <div class="work-card">
+                        <img src="portfolio-preview.png" alt="Project 2 Screenshot">
+                        <h3>Portfolio Website</h3>
+                        <p>A personal portfolio website built with HTML, CSS, and responsive design principles.</p>
+                        <a href="https://github.com/behram-sherifi" target="_blank" class="work-button">View Project</a>
+                    </div>
+                </div>
+            </section>
+        <!-- Contact Section -->
+            <section class="contact-section" id="contact">
+                <div class="contact-container">
+                    <h2>Contact Me</h2>
+                    <p>Have a project in mind or just want to say hello? Get in touch below:</p>
+                    <div class="contact-info">
+                        <a href="mailto:behramsherifi7@gmail.com"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+38977562742"><i class="fas fa-phone"></i></a>
+                        <a href="https://github.com/behram-sherifi" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </section>
+        <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-container">
+                    <div class="footer-column">
+                        <h3>Navigation</h3>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Me</a></li>
+                            <li><a href="#work">My Work</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="footer-column">
+                         <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p class="copyright">&#169; 2025 Behram Sherifi. All rights reserved.</p>
+                    <p id="scroll"><a href="#home">Scroll to Top &#10548;</a></p>
                 </div>
             </footer>
+
+            <script>
+                const hamburger = document.getElementById('hamburger');
+                const navLinks = document.getElementById('nav-links');
+
+                hamburger.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+            </script>
+
     </body>
 </html>
