@@ -419,3 +419,10 @@ body {
     color: white;
     text-decoration: none;
 }
+
+@media (max-width: 768px) {
+    #scroll {
+        color: white;
+        text-decoration: underline;
+    }
+}
