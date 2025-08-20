@@ -40,7 +40,52 @@
                 </div>
             </section>
         <!-- About Me -->
+            <section class="about-section" id="about">
+                <div class="about-container">
+                    <h2>About Me</h2>
+                    <div class="about-content">
+                        <p>
+                            I'm Behram Sherifi, a passionate <strong>front-end developer</strong> who
+                            loves turning ideas into clean, responsive, and interactive websites. I
+                            focus on writing well-structured code and creating user experiences that
+                            are both accessible and visually appealing.
+                        </p>
+                        <p>
+                            Beyond coding, I enjoy problem solving, continuous learning, and working
+                            on projects that challenge my creativity. My goal is to combine design
+                            and technology to bring digital experiences to life.
+                        </p>
+                    </div>
+                </div>
+            </section>
         <!--My Skills-->
+            <section class="skills-section" id="skills">
+                <div class="skills-container">
+                    <h2>My Skills</h2>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <i class="fab fa-html5"></i>
+                            <p>HTML5</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-css3-alt"></i>
+                            <p>CSS3</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-git-alt"></i>
+                            <p>Git & GitHub</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-mobile-alt"></i>
+                            <p>Responsive Design</p>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-pencil-ruler"></i>
+                            <p>UI / UX Principles</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
         <!-- My Work -->
             <section class="work-section" id="work">
                 <div class="work-container">
@@ -71,10 +116,10 @@
                         <a href="tel:+38977562742"><i class="fas fa-phone"></i></a>
                         <a href="https://github.com/behram-sherifi" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
-                    <form class="contact-form">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                    <form class="contact-form" action="https://formspree.io/f/xanbgdoo" method="POST" target="_blank">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea rows="5" name="message" placeholder="Your Message" required></textarea>
                         <button type="submit">Send Message</button>
                     </form>
                 </div>
@@ -82,21 +127,25 @@
         <!-- Footer -->
             <footer class="footer">
                 <div class="footer-container">
-                    <div class="footer-column">
-                        <h3>Navigation</h3>
-                        <ul>
-                            <li><a href="#home">Home</a></li>
-                            <li><a href="#about">About Me</a></li>
-                            <li><a href="#work">My Work</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
+                    <div class="footer-left">
                     </div>
-                    <div class="footer-column">
-                         <h3>Quick Links</h3>
-                        <ul>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms of Service</a></li>
-                        </ul>
+                    <div class="footer-right">
+                        <div class="footer-column">
+                            <h3>Navigation</h3>
+                            <ul>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#about">About Me</a></li>
+                                <li><a href="#work">My Work</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Terms of Service</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="footer-bottom">
@@ -105,14 +154,42 @@
                 </div>
             </footer>
 
-            <script>
-                const hamburger = document.getElementById('hamburger');
-                const navLinks = document.getElementById('nav-links');
 
-                hamburger.addEventListener('click', () => {
-                    navLinks.classList.toggle('active');
+            <script>
+                const navToggler = document.getElementById('hamburger');
+                const navMenu = document.getElementById('nav-links');
+                const navItems = document.querySelectorAll('.nav-link');
+                const sections = Array.from(document.querySelectorAll('section[id]'));
+
+                navToggler.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                });
+
+                function setActiveLink() {
+                    const scrollPos = window.scrollY || document.documentElement.scrollTop;
+                    const offset = 140;
+                    let currentId = sections[0]?.id || '';
+
+                    for (const sec of sections) {
+                        if (scrollPos >= sec.offsetTop - offset) currentId = sec.id;
+                    }
+
+                    navItems.forEach(a => {
+                        const isActive = a.getAttribute('href') === `#${currentId}`;
+                        a.classList.toggle('active', isActive);
+                    });
+                }
+
+                window.addEventListener('load', setActiveLink);
+                window.addEventListener('scroll', setActiveLink, { passive: true });
+
+                navItems.forEach(a => {
+                    a.addEventListener('click', () => {
+                        navMenu.classList.remove('active');
+                        navItems.forEach(n => n.classList.remove('active'));
+                        a.classList.add('active');
+                    });
                 });
             </script>
-
     </body>
 </html>
