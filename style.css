@@ -319,6 +319,12 @@ body {
   to { transform: translateY(0); opacity: 1; }
 }
 
+@media (max-width: 768px) {
+    .about-text {
+    padding: 1.3rem;
+    }
+}
+
 .skills-section {
   padding: 4rem 2rem;
   background-color: #f8fafc;
