@@ -180,10 +180,11 @@ body {
 }
 
 .nav-link.active {
-    color: #0ea5e9;
+    color: #6366f1;
 }
 
 .nav-link.active::after {
+    background: #6366f1;
     width: 100%;
 }
 
@@ -215,8 +216,8 @@ body {
 .hero p {
     font-size: 1.2rem;
     color: #334155;
+    line-height: 1.4;
     margin-bottom: 2rem;
-    line-height: 1.6;
 }
 
 .hero-button {
@@ -232,8 +233,8 @@ body {
 }
 
 .hero-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, .2);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
 .hero-image img {
@@ -302,8 +303,20 @@ body {
   flex: 2;
   min-width: 280px;
   font-size: 1.15rem;
-  line-height: 1.6;
+  line-height: 1.8;
   color: #334155;
+  padding-left: 1.5rem;
+  border-left: 4px solid #6366f1;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
 .skills-section {
@@ -350,18 +363,25 @@ body {
   padding: 2rem 1rem;
   border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  will-change: transform, box-shadow;
 }
 
 .skill-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
 }
 
 .skill-card i {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #6366f1;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.skill-card:hover i {
+  color: #4338ca;
+  transform: scale(1.2);
 }
 
 .skill-card p {
@@ -369,7 +389,6 @@ body {
   font-weight: 600;
   color: #0f172a;
 }
-
 
 .work-section {
     padding: 4rem 1rem;
@@ -381,6 +400,13 @@ body {
 .work-section h2 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
+}
+
+#work-text {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: 0 auto 2rem;
 }
 
 .work-section p {
@@ -444,14 +470,13 @@ body {
     background: linear-gradient(to right, #4f46e5, #7c3aed);
 }
 
-
 .contact-section {
     padding: 4rem 2rem;
     background-color: #f8fafc;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.08);
     margin: 4rem auto;
-    max-width: 900px;
+    max-width: 700px;
     text-align: center;
 }
 
@@ -519,6 +544,9 @@ body {
     cursor: pointer;
     font-weight: 600;
     transition: background 0.3s ease, transform 0.2s ease;
+    display: block;
+    width: 50%;
+    margin: 1rem auto 0; 
 }
 
 .contact-form button:hover {
@@ -552,6 +580,13 @@ body {
     padding: 3rem 1rem 1rem;
 }
 
+.footer h3 {
+  font-size: 1.2rem !important;   /* force same size */
+  font-weight: 600;              /* consistent weight */
+  color: #60a5fa;
+  margin-bottom: 1rem;
+}
+
 .footer-container {
     display: flex;
     justify-content: space-between;
@@ -569,6 +604,14 @@ body {
 
 .footer-left h3 {
     color: #60a5fa;
+    font-weight: 700;
+}
+
+.footer-left p {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  line-height: 1.3;
 }
 
 .footer-right {
@@ -622,6 +665,9 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;    
 }
 
 #scroll a {
@@ -634,4 +680,50 @@ body {
         color: white;
         text-decoration: underline;
     }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .footer-left,
+  .footer-right,
+  .footer-column {
+    width: 100%;
+  }
+
+  .footer-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+
+  .footer-left p {
+    max-width: 32ch;
+    margin: 0;
+    line-height: 1.6;
+    text-align: left;
+  }
+
+  .footer-column ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .footer h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-bottom {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
 }
