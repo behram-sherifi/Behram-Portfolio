@@ -206,6 +206,22 @@ body {
     width: 100%;
 }
 
+.lang-btn {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.lang-btn:hover {
+    background: white;
+    color: black;
+}
+
 p {
     font-size: 1.1rem;
 }
@@ -415,6 +431,9 @@ p {
     color: #0f172a;
 }
 
+/* =========================
+   WORK SECTION
+========================= */
 .work-section {
     padding: 4rem 1rem;
     background: #e2e8f0;
@@ -433,11 +452,6 @@ p {
     margin: 0 auto 2rem;
 }
 
-.work-section p {
-    margin-bottom: 2rem;
-    color: #334155;
-}
-
 .work-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -446,6 +460,9 @@ p {
     margin: 0 auto;
 }
 
+/* =========================
+   WORK CARDS (ALIGNMENT FIX)
+========================= */
 .work-card {
     background: white;
     border-radius: 12px;
@@ -453,6 +470,12 @@ p {
     padding: 1.5rem;
     text-align: left;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+    /* These three lines ensure all cards are the same height 
+       and allow the content inside to be positioned properly */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .work-card:hover {
@@ -472,24 +495,37 @@ p {
 }
 
 .work-card p {
-    margin-bottom: 1rem;
     color: #475569;
     font-size: 0.95rem;
     line-height: 1.5;
+    margin-bottom: 1.5rem;
+    
+    /* This makes the paragraph take up all available space, 
+       pushing the button below it to the very bottom */
+    flex-grow: 1;
 }
 
+/* =========================
+   WORK BUTTON
+========================= */
 .work-button {
     display: inline-block;
+    padding: 0.8rem 1.5rem;
     background: linear-gradient(to right, #6366f1, #8b6cf6);
     color: white;
     border-radius: 8px;
     font-weight: 600;
     text-decoration: none;
-    transition: background 0.2s ease;
+    transition: all 0.2s ease;
+    
+    /* Ensures the button doesn't stretch and stays at the bottom */
+    align-self: flex-start;
+    margin-top: auto;
 }
 
 .work-button:hover {
     background: linear-gradient(to right, #4f46e5, #7c3aed);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
 }
 
 .contact-section {

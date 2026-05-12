@@ -21,18 +21,19 @@
                         <a href="#work" class="nav-link">My Work</a>
                         <a href="#contact" class="nav-link">Contact Me</a>
                     </nav>
+                    <button class="lang-btn" id="lang-toggle">SQ</button>
                 </div>
             </header>
         <!-- Hero Section -->
             <section class="hero" id="home">
                 <div class="hero-content">
                     <div class="hero-text">
-                        <h1>Hello, I'm Behram.</h1>
-                        <p>I craft responsive, user-friendly websites as a front-end developer. 
+                        <h1 id="hero-title">Hello, I'm Behram.</h1>
+                        <p id="hero-desc">I craft responsive, user-friendly websites as a front-end developer. 
                         My focus is on clean design, accessibility, and performance to ensure that every project 
                         looks great and functions smoothly across all devices. 
                         I enjoy turning creative ideas into interactive digital experiences.</p>
-                        <a href="#work" class="hero-button">My Projects</a>
+                        <a href="#work" class="hero-button" id="hero-btn">My Projects</a>
                     </div>
                     <div class="hero-image">
                         <img src="IMG_8412.JPG" alt="Picture of Me">
@@ -42,11 +43,10 @@
         <!-- About Me -->
             <section class="about-section" id="about">
                 <div class="about-container">
-                    <h2>About Me</h2>
+                    <h2 id="about-title">About Me</h2>
                     <div class="about-content">
-                        <p class="about-text">
+                        <p class="about-text" id="about-text">
                             I'm Behram Sherifi, a passionate <strong>front-end developer</strong> dedicated to crafting clean, responsive, and interactive websites. My focus lies in writing well-structured code and building user experiences that are both accessible and visually engaging. I thrive on problem-solving, learning new technologies, and working on projects that push me to think outside the box. Beyond development, I enjoy blending design and technology to deliver digital products that don't just work—but feel intuitive and inspiring to use. My long-term goal is to grow as a developer while contributing to projects that make a real impact.
-                        </p>
                         </p>
                     </div>
                 </div>
@@ -54,7 +54,7 @@
         <!--My Skills-->
             <section class="skills-section" id="skills">
                 <div class="skills-container">
-                    <h2>My Skills</h2>
+                    <h2 id="skills-title">My Skills</h2>
                     <div class="skills-grid">
                         <div class="skill-card">
                             <i class="fab fa-html5"></i>
@@ -70,11 +70,11 @@
                         </div>
                         <div class="skill-card">
                             <i class="fas fa-mobile-alt"></i>
-                            <p>Responsive Design</p>
+                            <p id="skills-responsive">Responsive Design</p>
                         </div>
                         <div class="skill-card">
                             <i class="fas fa-pencil-ruler"></i>
-                            <p>UI / UX Principles</p>
+                            <p id="skills-ui">UI / UX Principles</p>
                         </div>
                     </div>
                 </div>
@@ -82,38 +82,38 @@
         <!-- My Work -->
             <section class="work-section" id="work">
                 <div class="work-container">
-                    <h2>My Work</h2>
+                    <h2 id="work-title">My Work</h2>
                     <p id="work-text">Here are some of the projects I've worked on recently. More coming soon!</p>
                     <div class="work-grid">
                         <div class="work-card">
                         <img src="game-store.png" alt="Project 1 Screenshot">
-                        <h3>Game Store</h3>
-                        <p>A responsive game store built with HTML, CSS, and Bootstrap featuring clean design and form validation for a user-friendly experience.</p>
-                        <a href="https://behram-sherifi.github.io/Scope/" target="_blank" class="work-button">View Project</a>
+                        <h3 id="game-title">Game Store</h3>
+                        <p id="game-desc">A responsive game store built with HTML, CSS, and Bootstrap featuring clean design and form validation for a user-friendly experience.</p>
+                        <a href="https://behram-sherifi.github.io/Scope/" target="_blank" class="work-button" id="game-btn">View Project</a>
                     </div>
                     <div class="work-card">
                         <img src="portfolio-preview.png" alt="Project 2 Screenshot">
-                        <h3>Portfolio Website</h3>
-                        <p>A personal portfolio website built with HTML, CSS, and responsive design principles.</p>
-                        <a href="https://behram-sherifi.github.io/Behram-Portfolio/" target="_blank" class="work-button">View Project</a>
+                        <h3 id="portfolio-title">Portfolio Website</h3>
+                        <p id="portfolio-desc">A personal portfolio website built with HTML, CSS, and responsive design principles.</p>
+                        <a href="https://behram-sherifi.github.io/Behram-Portfolio/" target="_blank" class="work-button" id="portfolio-btn">View Project</a>
                     </div>
                 </div>
             </section>
         <!-- Contact Section -->
             <section class="contact-section" id="contact">
                 <div class="contact-container">
-                    <h2>Contact Me</h2>
-                    <p>Have a project in mind or just want to say hello? Get in touch below:</p>
+                    <h2 id="contact-title">Contact Me</h2>
+                    <p id="contact-desc">Have a project in mind or just want to say hello? Get in touch below:</p>
                     <div class="contact-info">
                         <a href="mailto:behramsherifi7@gmail.com"><i class="fas fa-envelope"></i></a>
                         <a href="tel:+38977562742"><i class="fas fa-phone"></i></a>
                         <a href="https://github.com/behram-sherifi" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                     <form class="contact-form" action="https://formspree.io/f/xanbgdoo" method="POST" target="_blank">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea rows="5" name="message" placeholder="Your Message" required></textarea>
-                        <button type="submit">Send Message</button>
+                        <input type="text" id="name-input" name="name" placeholder="Your Name" required>
+                        <input type="email" id="email-input" name="email" placeholder="Your Email" required>
+                        <textarea rows="5" id="message-input" name="message" placeholder="Your Message" required></textarea>
+                        <button type="submit" id="submit-input">Send Message</button>
                     </form>
                 </div>
             </section>
@@ -121,30 +121,30 @@
             <footer class="footer">
                 <div class="footer-container">
                     <div class="footer-left">
-                        <h3>Title</h3>
-                        <p>Driven by curiosity and a love for problem-solving, I spend my time crafting digital solutions that make an impact. Whether I'm diving into new technologies or refining the small details of a user interface, my goal is always the same: create something meaningful.</p>
+                        <h3 id="footer-title">Behram Sherifi</h3>
+                        <p id="footer-desc">Driven by curiosity and a love for problem-solving, I spend my time crafting digital solutions that make an impact. Whether I'm diving into new technologies or refining the small details of a user interface, my goal is always the same: create something meaningful.</p>
                     </div>
                     <div class="footer-right">
                         <div class="footer-column">
-                            <h3>Navigation</h3>
+                            <h3 id="footer-nav">Navigation</h3>
                             <ul>
-                                <li><a href="#home">Home</a></li>
-                                <li><a href="#about">About Me</a></li>
-                                <li><a href="#work">My Work</a></li>
-                                <li><a href="#contact">Contact</a></li>
+                                <li><a href="#home" id="footer-home">Home</a></li>
+                                <li><a href="#about" id="footer-about">About Me</a></li>
+                                <li><a href="#work" id="footer-work">My Work</a></li>
+                                <li><a href="#contact" id="footer-contact">Contact</a></li>
                             </ul>
                         </div>
                         <div class="footer-column">
-                            <h3>Quick Links</h3>
+                            <h3 id="quick-links">Quick Links</h3>
                             <ul>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Terms of Service</a></li>
+                                <li><a href="#" id="privacy-policy">Privacy Policy</a></li>
+                                <li><a href="#" id="tos">Terms of Service</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p class="copyright">&#169; 2025 Behram Sherifi. All rights reserved.</p>
+                    <p class="copyright" id="copyright">&#169; 2025 Behram Sherifi. All rights reserved.</p>
                     <p id="scroll"><a href="#home">Scroll to Top &#10548;</a></p>
                 </div>
             </footer>
@@ -155,6 +155,8 @@
                 const navMenu = document.getElementById('nav-links');
                 const navItems = document.querySelectorAll('.nav-link');
                 const sections = Array.from(document.querySelectorAll('section[id]'));
+                const langToggle = document.getElementById('lang-toggle');
+                let currentLang = 'en';
 
                 navToggler.addEventListener('click', () => {
                     navMenu.classList.toggle('active');
@@ -184,6 +186,161 @@
                         navItems.forEach(n => n.classList.remove('active'));
                         a.classList.add('active');
                     });
+                });
+
+                const translations = {
+                    en: {
+                        home: "Home",
+                        about: "About Me",
+                        work: "My Work",
+                        contact: "Contact Me",
+                        heroTitle: "Hello, I'm Behram.",
+                        heroDesc: "I craft responsive, user-friendly websites as a front-end developer. My focus is on clean design, accessibility, and performance to ensure that every project looks great and functions smoothly across all devices. I enjoy turning creative ideas into interactive digital experiences.",
+                        heroBtn: "My Projects",
+                        aboutTitle: "About Me",
+                        aboutText: "I'm Behram Sherifi, a passionate front-end developer dedicated to crafting clean, responsive, and interactive websites. My focus lies in writing well-structured code and building user experiences that are both accessible and visually engaging. I thrive on problem-solving, learning new technologies, and working on projects that push me to think outside the box. Beyond development, I enjoy blending design and technology to deliver digital products that don't just work—but feel intuitive and inspiring to use. My long-term goal is to grow as a developer while contributing to projects that make a real impact.",
+                        skillsTitle: "My Skills",
+                        skillsResponsive: "Responsive Design",
+                        skillsUi: "UI / UX Principles",
+                        workTitle: "My Work",
+                        workText: "Here are some of the projects I've worked on recently. More coming soon!",
+                        gameTitle: "Game Store",
+                        gameDesc: "A responsive game store built with HTML, CSS, and Bootstrap featuring clean design and form validation for a user-friendly experience.",
+                        portfolioTitle: "Portfolio Website",
+                        portfolioDesc: "A personal portfolio website built with HTML, CSS, and responsive design principles.",
+                        projectBtn: "View Project",
+                        contactTitle: "Contact Me",
+                        contactDesc: "Have a project in mind or just want to say hello? Get in touch below:",
+                        namePlaceholder: "Your Name",
+                        emailPlaceholder: "Your Email",
+                        messagePlaceholder: "Your Message",
+                        submitBtn: "Send Message",
+                        footerTitle: "Behram Sherifi",
+                        footerDesc: "Driven by curiosity and a love for problem-solving, I spend my time crafting digital solutions that make an impact.",
+                        footerNav: "Navigation",
+                        footerHome: "Home",
+                        footerAbout: "About Me",
+                        footerWork: "My Work",
+                        footerContact: "Contact",
+                        quickLinks: "Quick Links",
+                        privacy: "Privacy Policy",
+                        tos: "Terms of Service",
+                        copyright: "© 2025 Behram Sherifi. All rights reserved.",
+                        scrollTop: "Scroll to Top ⤴"
+                    },
+                    sq: {
+                        home: "Ballina",
+                        about: "Rreth Meje",
+                        work: "Projektet",
+                        contact: "Kontakti",
+                        heroTitle: "Përshëndetje, unë jam Behrami.",
+                        heroDesc: "Krijoj faqe moderne, responsive dhe të lehta për përdorim si front-end developer. Fokusimi im është te dizajni i pastër, qasja e lehtë dhe performanca për të siguruar që çdo projekt të duket dhe funksionojë mirë në çdo pajisje. Më pëlqen të kthej idetë kreative në eksperienca digjitale interaktive.",
+                        heroBtn: "Projektet e Mia",
+                        aboutTitle: "Rreth Meje",
+                        aboutText: "Unë jam Behram Sherifi, një front-end developer i apasionuar pas krijimit të faqeve moderne, responsive dhe interaktive. Fokusimi im është në shkrimin e kodit të organizuar dhe krijimin e eksperiencave që janë vizualisht tërheqëse dhe të lehta për përdorim. Më pëlqen zgjidhja e problemeve, mësimi i teknologjive të reja dhe puna në projekte që më sfidojnë të mendoj ndryshe. Përtej zhvillimit, më pëlqen të kombinoj dizajnin dhe teknologjinë për të krijuar produkte digjitale që jo vetëm funksionojnë mirë, por edhe ndihen intuitive dhe frymëzuese për përdoruesit.",
+                        skillsTitle: "Aftësitë e Mia",
+                        skillsResponsive: "Dizajn Responsiv",
+                        skillsUi: "Parimet UI / UX",
+                        workTitle: "Projektet e Mia",
+                        workText: "Këto janë disa nga projektet ku kam punuar së fundmi. Më shumë së shpejti!",
+                        gameTitle: "Dyqan Lojërash",
+                        gameDesc: "Një dyqan lojërash responsive i ndërtuar me HTML, CSS dhe Bootstrap me dizajn modern dhe validim formularësh për një eksperiencë të mirë përdoruesi.",
+                        portfolioTitle: "Faqe Portfolio",
+                        portfolioDesc: "Një web faqe personale portfolio e ndërtuar me HTML, CSS dhe responsive design.",
+                        projectBtn: "Shiko Projektin",
+                        contactTitle: "Kontakto",
+                        contactDesc: "Ke një projekt në mendje apo thjesht dëshiron të përshëndetesh? Kontakto më poshtë:",
+                        namePlaceholder: "Emri Juaj",
+                        emailPlaceholder: "Email-i Juaj",
+                        messagePlaceholder: "Mesazhi Juaj",
+                        submitBtn: "Dërgo Mesazhin",
+                        footerTitle: "Behram Sherifi",
+                        footerDesc: "I shtyrë nga kureshtja dhe dëshira për zgjidhjen e problemeve, kaloj kohën duke krijuar zgjidhje digjitale me ndikim.",
+                        footerNav: "Navigimi",
+                        footerHome: "Ballina",
+                        footerAbout: "Rreth Meje",
+                        footerWork: "Projektet",
+                        footerContact: "Kontakti",
+                        quickLinks: "Linqe të Shpejta",
+                        privacy: "Politika e Privatësisë",
+                        tos: "Kushtet e Shërbimit",
+                        copyright: "© 2025 Behram Sherifi. Të gjitha të drejtat e rezervuara.",
+                        scrollTop: "Kthehu Lart ⤴"
+                    }
+                };
+
+                function changeLanguage(lang) {
+                    // NAV
+                    document.querySelector('a[href="#home"]').textContent = translations[lang].home;
+                    document.querySelector('a[href="#about"]').textContent = translations[lang].about;
+                    document.querySelector('a[href="#work"]').textContent = translations[lang].work;
+                    document.querySelector('a[href="#contact"]').textContent = translations[lang].contact;
+
+                    // HERO
+                    document.getElementById('hero-title').textContent = translations[lang].heroTitle;
+                    document.getElementById('hero-desc').textContent = translations[lang].heroDesc;
+                    document.getElementById('hero-btn').textContent = translations[lang].heroBtn;
+
+                    // ABOUT
+                    document.getElementById('about-title').textContent = translations[lang].aboutTitle;
+                    document.getElementById('about-text').textContent = translations[lang].aboutText;
+
+                    // SKILLS
+                    document.getElementById('skills-title').textContent = translations[lang].skillsTitle;
+                    document.getElementById('skills-responsive').textContent = translations[lang].skillsResponsive;
+                    document.getElementById('skills-ui').textContent = translations[lang].skillsUi;
+
+                    // WORK
+                    document.getElementById('work-title').textContent = translations[lang].workTitle;
+                    document.getElementById('work-text').textContent = translations[lang].workText;
+                    document.getElementById('game-title').textContent = translations[lang].gameTitle;
+                    document.getElementById('game-desc').textContent = translations[lang].gameDesc;
+                    document.getElementById('portfolio-title').textContent = translations[lang].portfolioTitle;
+                    document.getElementById('portfolio-desc').textContent = translations[lang].portfolioDesc;
+                    document.getElementById('game-btn').textContent = translations[lang].projectBtn;
+                    document.getElementById('portfolio-btn').textContent = translations[lang].projectBtn;
+
+                    // CONTACT
+                    document.getElementById('contact-title').textContent = translations[lang].contactTitle;
+                    document.getElementById('contact-desc').textContent = translations[lang].contactDesc;
+                    document.getElementById('name-input').placeholder = translations[lang].namePlaceholder;
+                    document.getElementById('email-input').placeholder = translations[lang].emailPlaceholder;
+                    document.getElementById('message-input').placeholder = translations[lang].messagePlaceholder;
+                    document.getElementById('submit-input').textContent = translations[lang].submitBtn;
+
+                    // FOOTER
+                    document.getElementById('footer-title').textContent = translations[lang].footerTitle;
+                    document.getElementById('footer-desc').textContent = translations[lang].footerDesc;
+                    document.getElementById('footer-nav').textContent = translations[lang].footerNav;
+                    document.getElementById('footer-home').textContent = translations[lang].footerHome;
+                    document.getElementById('footer-about').textContent = translations[lang].footerAbout;
+                    document.getElementById('footer-work').textContent = translations[lang].footerWork;
+                    document.getElementById('footer-contact').textContent = translations[lang].footerContact;
+                    document.getElementById('quick-links').textContent = translations[lang].quickLinks;
+                    document.getElementById('privacy-policy').textContent = translations[lang].privacy;
+                    document.getElementById('tos').textContent = translations[lang].tos;
+                    document.getElementById('copyright').textContent = translations[lang].copyright;
+
+                    // SCROLL BUTTONS
+                    const footerScroll = document.querySelector('#scroll a');
+                    const mobileScroll = document.getElementById('scroll-mobile');
+                    if(footerScroll) footerScroll.textContent = translations[lang].scrollTop;
+                    if(mobileScroll) mobileScroll.textContent = translations[lang].scrollTop;
+
+                    // TOGGLE BUTTON TEXT
+                    langToggle.textContent = lang === 'en' ? 'SQ' : 'EN';
+                }
+
+                const savedLang = localStorage.getItem('language');
+                if (savedLang) {
+                    currentLang = savedLang;
+                    changeLanguage(currentLang);
+                }
+
+                langToggle.addEventListener('click', () => {
+                    currentLang = currentLang === 'en' ? 'sq' : 'en';
+                    localStorage.setItem('language', currentLang);
+                    changeLanguage(currentLang);
                 });
             </script>
             <button id="scroll-mobile" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
