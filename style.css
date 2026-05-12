@@ -156,7 +156,7 @@ body {
     .logo-circle {
     position: static;
     left: auto;
-    margin-right: auto; /* stick to the left */
+    margin-right: auto;
   }
 
     .hamburger {
@@ -431,9 +431,6 @@ p {
     color: #0f172a;
 }
 
-/* =========================
-   WORK SECTION
-========================= */
 .work-section {
     padding: 4rem 1rem;
     background: #e2e8f0;
@@ -460,9 +457,6 @@ p {
     margin: 0 auto;
 }
 
-/* =========================
-   WORK CARDS (ALIGNMENT FIX)
-========================= */
 .work-card {
     background: white;
     border-radius: 12px;
@@ -470,9 +464,6 @@ p {
     padding: 1.5rem;
     text-align: left;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    
-    /* These three lines ensure all cards are the same height 
-       and allow the content inside to be positioned properly */
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -499,15 +490,9 @@ p {
     font-size: 0.95rem;
     line-height: 1.5;
     margin-bottom: 1.5rem;
-    
-    /* This makes the paragraph take up all available space, 
-       pushing the button below it to the very bottom */
     flex-grow: 1;
 }
 
-/* =========================
-   WORK BUTTON
-========================= */
 .work-button {
     display: inline-block;
     padding: 0.8rem 1.5rem;
@@ -517,8 +502,6 @@ p {
     font-weight: 600;
     text-decoration: none;
     transition: all 0.2s ease;
-    
-    /* Ensures the button doesn't stretch and stays at the bottom */
     align-self: flex-start;
     margin-top: auto;
 }
