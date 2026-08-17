@@ -382,15 +382,14 @@ p {
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centers items on all rows automatically */
+  justify-content: center;
   gap: 1.5rem;
   max-width: 900px;
   margin: 0 auto;
 }
 
-/* Gives each card a comfortable fixed size so 4 fit on top and 3 on bottom */
 .skills-grid > * {
-  flex: 0 1 calc(25% - 1.5rem); /* ~4 items per row */
+  flex: 0 1 calc(25% - 1.5rem);
   min-width: 140px;
 }
 
