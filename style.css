@@ -380,9 +380,18 @@ p {
 }
 
 .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers items on all rows automatically */
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Gives each card a comfortable fixed size so 4 fit on top and 3 on bottom */
+.skills-grid > * {
+  flex: 0 1 calc(25% - 1.5rem); /* ~4 items per row */
+  min-width: 140px;
 }
 
 @media (max-width: 768px) {
